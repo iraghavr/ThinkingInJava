@@ -1,0 +1,8 @@
+chapter19 _ 枚举类型
+1. enum 的values（）方法，可遍历enum实例
+values()是编译器添加的Static方法
+
+使用反射机制，用反编译命令查看。
+
+2.enum可添加方法，甚至main方法
+3.switch中可用enum

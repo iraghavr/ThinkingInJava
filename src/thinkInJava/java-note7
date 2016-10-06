@@ -1,3 +1,34 @@
+chapter18 -IO
 1.目录列表器
  实现：过滤，目录打印
- 2.
+ 2.IO 面向流：            面向字符 ：
+ InputStream                Reader  适配器： InputStreamReader
+
+ FileInputStream          FileReader
+
+
+ IO包装类：
+ 面向流：               面向字符
+ FilterInputStream     FilterReader
+
+ BufferedInputStraem  BufferedReader
+
+3. 序列化
+对象： 在程序启动后创建，在程序结束时消失。
+场景：对象能够在程序不运行的情况下仍能存在并保存其信息。——序列化
+使得，下次运行程序时，对象将被重建，并拥有与程序上次运行时相同的信息。
+Java -Serializable接口
+对象序列化—— 可实现轻量级持久性
+持久性——对象的生存周期并不取决于程序是否正在执行。
+对象序列化 目的-支持的两种特性，其一——RMI Java的远程方法调用： 向远程对象发送消息，需要通过对象序列化来传输参数和返回值。
+                                其二——Java Beans
+4. transient 瞬时关键字
+ 当一个对象实现了Serializable接口，其字段将全部自动序列化，使用transient可使被其修饰的字段不被序列，即不保存状态信息。
+ 使用方式：
+         ObjectOutputStream o = new ObjectOutputStream((new FileOutputStream("Logon.out")));
+         o.writeObject(a);
+         o.close();
+5.对象序列化是Java的解决方式，另一种解决方案：XML
+
+
+
